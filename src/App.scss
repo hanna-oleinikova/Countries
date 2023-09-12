@@ -1,0 +1,37 @@
+.title {
+  color: darkslategray;
+  text-align: center;
+  padding: 1em;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  background-color: darkslategray;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 3em;
+  justify-content: center;
+  margin-top: 2em;
+
+  h3 {
+    color: white;
+    text-align: center;
+    margin: 1em;
+  }
+
+  .cont-country, .cont-capital, .cont-time, .cont-many, .cont-flag, .cont-language, .cont-border {
+    border: 1em solid rgb(28, 46, 46);
+    width: 30%;
+    border-radius: 1em;
+    // clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+
+}
