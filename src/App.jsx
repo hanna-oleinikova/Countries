@@ -45,9 +45,9 @@ function App() {
             <div className='answer'>
               {foundCountries.map((country) => {
               return (
-                <h2 className='found-data' key={country.name.common}>{country.capital}</h2>
+                <h2 className='found-data' key={country.name.common}>{country.capital.join(', ')}</h2>
               )
-                        })}
+              })}
             </div>
           </div>
         
@@ -117,9 +117,12 @@ function App() {
                   const languageCodes = Object.keys(country.languages);
                   const languageNames = languageCodes.map((code) => country.languages[code]);
                   return (
-                    <h2 className='found-data' key={country.name.common}>{languageNames.join(', ')}</h2>
+                    <h2 
+                      className={languageCodes.length < 3 ? 'found-data' : 'found-data-small'} 
+                      key={country.name.common}>
+                        {languageNames.join(', ')}
+                    </h2>
                   );}
-                  return "Not found";
                 })}
             </div>
           </div>
